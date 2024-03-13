@@ -35,3 +35,11 @@ th {
 td{
     color:white
 }
+.tabla-uno {
+    background-color: black;
+}
+
+.tabla-dos {
+    background-color:grey ;
+}
+button:hover {background-color: orange;}

@@ -9,15 +9,11 @@
 <body>
     <div>
         <h1>My Personal Page</h1>
+        <h2>About Me</h2>
         <p>
             Hello! My name is Lucas Heuzé and I'm currently in fourth year of Civil Engineering in Computer Science at Universidad de Los Andes in Santiago de Chile.
         </p>
-    </div>
-    
-    <div>
-        <h2>About Me</h2>
-        <p></p>
-    </div>
+    </div>    
     
     <div>
         <h2>Github</h2>
@@ -27,8 +23,9 @@
 
     <div>
         <h2>My skills</h2>
+        <button id="swapColors">Swap colors</button>
         <h3>Languages</h3>
-        <table>
+        <table class="tabla-uno">
             <tr>
                 <th>language</th>
                 <th>level</th>
@@ -47,7 +44,7 @@
             </tr>
         </table>
         <h3>Programming languages</h3>
-        <table>
+        <table class="tabla-dos">
             <tr>
                 <th>Skill</th>
                 <th>level</th>
@@ -58,9 +55,26 @@
             </tr>
             <tr>
                 <td>HTML/CSS</td>
-                <td>Professional (carita fachera)</td>
+                <td>Beginner</td>
+            </tr>
+            <tr>
+                <td>C/C++</td>
+                <td>Advanced</td>
+            </tr>
+            <tr>
+                <td>SQL</td>
+                <td>Advanced</td>
             </tr>
         </table>
     </div>
+    <script>
+        document.getElementById("swapColors").addEventListener("click", function() {
+          var table1Color = document.getElementsByClassName("tabla-uno")[0].style.backgroundColor;
+          var table2Color = document.getElementsByClassName("tabla-dos")[0].style.backgroundColor;
+        
+          document.getElementsByClassName("tabla-uno")[0].style.backgroundColor = table2Color;
+          document.getElementsByClassName("tabla-dos")[0].style.backgroundColor = table1Color;
+        });
+    </script>
 </body>
 </html>
