@@ -3,18 +3,23 @@ body {
 }
 h1 {
     background-color: teal;
-    color: white
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
 }
 h2 {
     background-color: #0e2a30;
-    color:white
+    color:white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 h3 {
     background-color: #e4d683;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 p {
-    color: white
+    color: white;
+    font-family: verdana;
+    
 }
 th, td , table {
     border: 1px solid;

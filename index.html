@@ -9,20 +9,21 @@
 <body>
     <div>
         <h1>My Personal Page</h1>
-        <h2>About Me</h2>
+        <input id="textInput" type="text"></input>
+        <h2 >About Me</h2>
         <p>
             Hello! My name is Lucas Heuzé and I'm currently in fourth year of Civil Engineering in Computer Science at Universidad de Los Andes in Santiago de Chile.
         </p>
     </div>    
     
     <div>
-        <h2>Github</h2>
+        <h2 >Github</h2>
         <p>By clicking <a href="https://github.com/LHeuze">here</a> you'll be able to access to all my recent projects!</p>
     </div>
     
 
     <div>
-        <h2>My skills</h2>
+        <h2 >My skills</h2>
         <button id="swapColors">Swap colors</button>
         <h3>Languages</h3>
         <table class="tabla-uno">
@@ -65,16 +66,40 @@
                 <td>SQL</td>
                 <td>Advanced</td>
             </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>Beginner</td>
+            </tr>
         </table>
     </div>
     <script>
+        function changeColor() {
+            var colorValue = document.getElementById("textInput").value;
+            var h2Elements = document.querySelectorAll("h2");            
+            h2Elements.forEach(function(h2) {
+                h2.style.color = colorValue;
+            });
+        }
+    
         document.getElementById("swapColors").addEventListener("click", function() {
-          var table1Color = document.getElementsByClassName("tabla-uno")[0].style.backgroundColor;
-          var table2Color = document.getElementsByClassName("tabla-dos")[0].style.backgroundColor;
-        
-          document.getElementsByClassName("tabla-uno")[0].style.backgroundColor = table2Color;
-          document.getElementsByClassName("tabla-dos")[0].style.backgroundColor = table1Color;
+            var table1Color = document.getElementsByClassName("tabla-uno")[0].style.backgroundColor;
+            var table2Color = document.getElementsByClassName("tabla-dos")[0].style.backgroundColor;
+            var randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+    
+            document.body.style.backgroundColor = randomColor;
+            
+            var tablaUno = document.getElementsByClassName("tabla-uno")[0];
+            var tablaDos = document.getElementsByClassName("tabla-dos")[0];
+            
+            tablaUno.classList.remove("tabla-uno");
+            tablaDos.classList.remove("tabla-dos");
+            
+            tablaUno.classList.add("tabla-dos");
+            tablaDos.classList.add("tabla-uno");
+    
+            changeColor();
         });
     </script>
+    
 </body>
 </html>
