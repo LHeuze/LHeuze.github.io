@@ -5,75 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My personal page</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <div>
-        <h1>My Personal Page</h1>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <div class="alert alert-danger" role="alert">
+        Welcome to my page!
+    </div>
+    <div class="container-fluid">
+        <h1>My Personal Page</h1>        
         <p>Enter a color then press the button (ie. red,blue,green):</p>
         <input id="textInput" type="text"></input>
+        <button id="swapColors" type="button" class="btn btn-outline-warning btn-sm">Swap colors</button>
         <h2 >About Me</h2>
-        <p>
-            Hello! My name is Lucas Heuzé and I'm currently in fourth year of Civil Engineering in Computer Science at Universidad de Los Andes in Santiago de Chile.
-        </p>
-        <p>Some things about me. I was born 11th of July 2000 and my zodiac sign is cancer. I like playing videogames and sports like football and volleyball. Also I haven't failed any courses... yet.</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    Hello! My name is Lucas Heuzé and I'm currently in fourth year of Civil Engineering in Computer Science at Universidad de Los Andes in Santiago de Chile.
+                </div>
+                <div class="col-6">
+                    Some things about me. I was born 11th of July 2000 and my zodiac sign is cancer. I like playing videogames and sports like football and volleyball. Also I haven't failed any courses... yet.
+                </div>
+            </div>
+        </div>
     </div>    
     
-    <div>
+    <div class="container-fluid">
         <h2 >Github</h2>
         <p>By clicking <a href="https://github.com/LHeuze">here</a> you'll be able to access to all my recent projects!</p>
     </div>
-    
-
-    <div>
-        <h2 >My skills</h2>
-        <button id="swapColors">Swap colors</button>
-        <h3>Languages</h3>
-        <table class="tabla-uno">
-            <tr>
-                <th>language</th>
-                <th>level</th>
-            </tr>
-            <tr>
-                <td>Spanish</td>
-                <td>Native</td>
-            </tr>
-            <tr>
-                <td>French</td>
-                <td>Native</td>
-            </tr>
-            <tr>
-                <td>English</td>
-                <td>Advanced</td>
-            </tr>
-        </table>
-        <h3>Programming languages</h3>
-        <table class="tabla-dos">
-            <tr>
-                <th>Skill</th>
-                <th>level</th>
-            </tr>
-            <tr>
-                <td>Python</td>
-                <td>Advanced</td>
-            </tr>
-            <tr>
-                <td>HTML/CSS</td>
-                <td>Beginner</td>
-            </tr>
-            <tr>
-                <td>C/C++</td>
-                <td>Advanced</td>
-            </tr>
-            <tr>
-                <td>SQL</td>
-                <td>Advanced</td>
-            </tr>
-            <tr>
-                <td>JavaScript</td>
-                <td>Beginner</td>
-            </tr>
-        </table>
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item"> 
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                    My skills
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                <div class="accordion-body">                    
+                    <div class="container text-center">                
+                        <div class="row justify-content-around">
+                            <div class="col-4">
+                                <h3>Languages</h3>
+                                <table class="tabla-uno">
+                                    <tr>
+                                        <th>language</th>
+                                        <th>level</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Spanish</td>
+                                        <td>Native</td>
+                                    </tr>
+                                    <tr>
+                                        <td>French</td>
+                                        <td>Native</td>
+                                    </tr>
+                                    <tr>
+                                        <td>English</td>
+                                        <td>Advanced</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                            <div class="col-4">
+                                <h3>Programming languages</h3>
+                                <table class="tabla-dos">
+                                    <tr>
+                                        <th>Skill</th>
+                                        <th>level</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Python</td>
+                                        <td>Advanced</td>
+                                    </tr>
+                                    <tr>
+                                        <td>HTML/CSS</td>
+                                        <td>Beginner</td>
+                                    </tr>
+                                    <tr>
+                                        <td>C/C++</td>
+                                        <td>Advanced</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SQL</td>
+                                        <td>Advanced</td>
+                                    </tr>
+                                    <tr>
+                                        <td>JavaScript</td>
+                                        <td>Beginner</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    
     <script>
         function changeColor() {
             var colorValue = document.getElementById("textInput").value;
